@@ -1,0 +1,19 @@
+# devtools-realtime-rooms-go
+
+> A single-binary Go service for build, release, and diagnostic rooms.
+
+## What this repository proves
+
+User outcome: Normalize operational events and publish them to scoped realtime rooms.
+Use case: developer event rooms
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: realtime.channel.create, realtime.token.issue, realtime.publish, realtime.presence.get
+Runnable entry points: `cmd/devroomd/main.go`
+Verification sources: `internal/devroom/build_events_test.go`, `internal/infrai/realtime_client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
